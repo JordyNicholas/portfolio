@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
-import { LeftViewComponent } from './left-view/left-view.component';
-import { RightViewComponent } from './right-view/right-view.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { LeftViewComponent } from './components/left-view/left-view.component';
+import { RightViewComponent } from './components/right-view/right-view.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { RightViewComponent } from './right-view/right-view.component';
     TopMenuComponent,
     SideMenuComponent,
     LeftViewComponent,
-    RightViewComponent
+    RightViewComponent,
   ],
   imports: [
     BrowserModule,

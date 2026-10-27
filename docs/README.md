@@ -11,4 +11,4 @@ Docs follow [Diátaxis](https://diataxis.fr/): four types, four jobs.
 
 Start here if you are new: [tutorials/getting-started.md](tutorials/getting-started.md).
 
-Useful reference while building C0.2+: [reference/architecture.md](reference/architecture.md) · [explanation/content-boundaries.md](explanation/content-boundaries.md).
+Useful for C0.2+: [reference/architecture.md](reference/architecture.md) (folders & data vs messages) · [explanation/content-boundaries.md](explanation/content-boundaries.md).

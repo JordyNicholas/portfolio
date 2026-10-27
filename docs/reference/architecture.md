@@ -1,86 +1,79 @@
-# Architecture (Portfolio v1)
+# Project structure (Portfolio v1)
 
-FE-only Next.js App Router landing. Boundaries stay thin: **routes → UI → content/i18n → theme**. No backend, no CMS.
+Standard Next.js App Router layout. FE-only: no API routes required for v1.
 
-## Folder map (target)
+## Folders
 
 ```text
 app/
-  [locale]/                 # next-intl routes (lands in C2.1)
+  [locale]/              # next-intl (C2.1+)
     layout.tsx
-    page.tsx                  # composes section components only
-  styles/fonts/               # next/font exports (exists)
+    page.tsx               # composes section components
+  styles/fonts/            # next/font (already present)
   globals.css
 components/
-  layout/                     # AppBar, PageContainer, ThemeRegistry
-  sections/                   # Hero, About, Experience, …
-  ui/                         # dumb presentational bits (StatusPill, …)
-content/
-  projects.ts                 # structured data + i18n key refs (not prose)
-  experience.ts               # optional: ids/dates/order; prose in messages
-  education.ts                # optional: same pattern
-  skills.ts                   # chip ids / group keys
-  site.ts                     # contact URLs, CV paths (locale-invariant)
-messages/
+  layout/                  # shell: providers, app bar, page width
+  sections/                # landing blocks (Hero, About, …)
+  ui/                      # small reusable UI (e.g. status pill)
+data/                      # typed lists / config (not translated prose)
+  projects.ts
+  site.ts                  # contact links, CV paths
+  experience.ts            # optional: ids, dates, order
+  education.ts             # optional
+  skills.ts                # optional: group + chip ids
+messages/                  # next-intl catalogs
   en.json
   pt.json
+lib/                       # i18n config, helpers (no React UI)
 public/
-  cv/                         # AmplifyIT PDFs (C4.1)
-docs/                         # Diátaxis (this tree)
+  cv/                      # static PDFs (C4.1)
+docs/                      # Diátaxis
 ```
 
-Keep `app/` for routing and providers. Domain lists and copy contracts live under `content/` + `messages/`, not inside components.
+## Conventions (common FE)
 
-## Content contracts
-
-### Rule
-
-| Kind | Where | Example |
+| Concern | Put it in | Notes |
 | --- | --- | --- |
-| Locale-invariant facts | `content/*.ts` | GitHub URL, status, dates, stack tech ids |
-| Human prose / labels | `messages/{en,pt}.json` | Description, bullets, section titles |
-| UI structure | `components/` | Layout, MUI composition |
+| Routes & providers | `app/` | Keep pages thin |
+| React UI | `components/` | Prefer props + `useTranslations` over hardcoded copy |
+| Translated copy | `messages/*.json` | next-intl default |
+| Shared/non-translated data | `data/*.ts` | URLs, status, dates, tech tags |
+| Config & pure helpers | `lib/` | e.g. `lib/i18n.ts` |
+| Static files | `public/` | CV PDFs, favicon, OG image |
 
-Components receive **data + `t()`**, not hardcoded EN/PT strings (stubs/keys OK in C0.2).
+## Data vs messages
 
-### `content/projects.ts` (minimum shape)
+- **`data/`** — values that do not change with language (GitHub URL, `ongoing` \| `complete`, ISO-ish dates, stack tags).
+- **`messages/`** — titles, descriptions, bullets, button labels, meta description.
+
+Link them by **id** (e.g. `data/projects.ts` has `id: "tokenforge"` → keys under `projects.tokenforge.*` in JSON).
+
+### `data/projects.ts` shape
 
 ```ts
 export type ProjectStatus = "ongoing" | "complete";
 
 export type Project = {
-  id: string;                 // slug: "tokenforge"
-  status: ProjectStatus;      // set here — never infer from GitHub
+  id: string;
+  status: ProjectStatus; // curated here; do not infer from GitHub
   github: string;
-  stack: string[];            // tech labels or ids shared with Skills
-  family?: "monokit";         // optional grouping for API + Web
-  // i18n: messages projects.<id>.{title,description,bullets}
+  stack: string[];
+  family?: "monokit";
 };
 ```
 
-Monokit = two `Project` rows (`monokit-api`, `monokit-web`) with `family: "monokit"`.
+Monokit = two projects (`monokit-api`, `monokit-web`) with the same `family`.
 
-### Messages
+### `data/site.ts`
 
-- Flat or lightly nested JSON keyed by section: `hero.*`, `about.*`, `experience.<id>.*`, `projects.<id>.*`, …
-- Bullets = string arrays under the same id.
-- Meta strings (`metadata.title`) live in messages too (wired in C4.2).
+Stable links: LinkedIn, `mailto:`, WhatsApp (`wa.me/…`), GitHub, CV paths per locale.
 
-### Contact / CV
+## Import rules (keep it boring)
 
-Put stable URLs in `content/site.ts` (LinkedIn, mailto, `wa.me/5512982088663`, GitHub, `/cv/jordy-nicholas-en.pdf` | `…-pt.pdf`). Labels stay in messages.
+- `data/` and `lib/` do not import React or MUI.
+- Section components may import `data/*` and next-intl; they should not embed EN/PT string literals (keys/stubs OK until C2.2).
+- Do not import one section from another; compose on the page.
 
-## Dependency direction
+## Not in C0.2
 
-```text
-app/[locale]  →  components/sections  →  content/* + next-intl messages
-              →  components/layout    →  theme (C1)
-```
-
-- Sections must not import other sections’ internals.
-- `content/*` must not import React, MUI, or `next/navigation`.
-- Theme/tokens (C1) must not import section copy.
-
-## Out of scope for C0.2
-
-Wiring `next-intl` middleware, real copy dump (C2.2), theme palette (C1), section UIs (C3). Stubs and empty message shells are enough.
+Locale middleware wiring (C2.1), full copy (C2.2), theme tokens (C1), real section UI (C3). Empty `messages` shells + typed stubs in `data/` are enough.

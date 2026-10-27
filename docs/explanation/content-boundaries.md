@@ -1,7 +1,10 @@
-# Why content is split from UI
+# Why split `data/` and `messages/`
 
-Portfolio copy is bilingual and locked in a content freeze. If prose lives inside JSX, every edit risks EN/PT drift and forces UI PRs for wording.
+This site is bilingual. If English and Portuguese strings live inside components, every wording change touches UI files and the two languages drift.
 
-**Invariant data** (URLs, dates, status, stack ids) rarely changes with locale — it belongs in typed TypeScript modules. **Words** change with locale — they belong in `messages/`. Sections only compose the two.
+Frontend apps that use next-intl (and similar i18n libraries) normally keep:
 
-That keeps C2.2 (load locked copy) a data task, and C3.* a presentation task, instead of one mixed rewrite.
+- **message catalogs** for UI copy, and  
+- **modules or CMS data** for structured fields that are the same in every language.
+
+Here the “CMS” is just TypeScript under `data/`. Components read an id from `data/`, then load the matching strings from `messages/`. That matches how most Next.js + i18n codebases are organized, without extra architecture jargon.

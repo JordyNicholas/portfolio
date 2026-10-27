@@ -1,21 +1,27 @@
-# Why Portfolio v1 is shaped this way
+# Why this portfolio shape
 
-## Product intent
+Why Portfolio v1 uses a bilingual Next.js landing with MUI, next-intl, and static CV downloads.
 
-A bilingual (EN/PT) software-engineer landing site for applications in Brazil, Portugal, and remote NA/EU markets. Copy is richer than the ATS CV, but still fact-based. Public personal projects are showcased; client NDA work stays nameless.
+## Product
 
-## Why this stack
+A software-engineer site for applications in Brazil, Portugal, and remote NA/EU markets. Copy is richer than an ATS CV but still fact-based. Public GitHub projects are listed; client work stays NDA-safe (no client product names).
 
-- **Next.js App Router** — static-friendly marketing site with room for locale routes.
-- **MUI** — professional Material baseline; dark default with a light toggle.
-- **next-intl** — first-class EN/PT without a CMS.
-- **Motion** — small, intentional presence animations; reduced-motion respected later in the board.
-- **FE-only v1** — no contact backend; `mailto:`, WhatsApp `wa.me`, LinkedIn, GitHub, and static CV PDFs.
+## Stack choices
 
-## Delivery model
+| Choice | Reason |
+| --- | --- |
+| Next.js App Router | Static-friendly marketing site with locale segments |
+| MUI | Familiar Material UI baseline; dark default + light toggle |
+| next-intl | EN/PT without a CMS |
+| Motion | A few intentional animations later; respect reduced motion |
+| FE-only v1 | `mailto:`, WhatsApp, LinkedIn, GitHub, and PDFs — no contact API |
 
-Work is one epic broken into SDLC cycles (bootstrap → design system → i18n/content → sections → SEO/assets → motion/a11y → QA/release). Changes ship on `main`; reviews check board **Definition of Done**, not PR process.
+## How work is tracked
 
-## Documentation
+Implementation follows one GitHub epic broken into board issues (bootstrap → theme/shell → i18n → sections → SEO → a11y → release). Code ships on `main`. Reviews check each issue’s Definition of Done.
 
-Project docs use Diátaxis so tutorials, how-tos, reference, and explanation stay separate. See [docs/README.md](../README.md).
+## Related
+
+- [Project structure](../reference/project-structure.md)
+- [Stack](../reference/stack.md)
+- [Why `data/` and `messages/`](content-boundaries.md)

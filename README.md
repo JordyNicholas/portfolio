@@ -1,6 +1,8 @@
 # Jordy Nicholas — Portfolio
 
-Bilingual (EN/PT) software-engineer portfolio. Built with Next.js and MUI. Delivery tracked on [Portfolio v1 Delivery](https://github.com/users/JordyNicholas/projects/7).
+Bilingual (EN/PT) software-engineer portfolio built with Next.js and MUI.
+
+Delivery: [Portfolio v1 Delivery](https://github.com/users/JordyNicholas/projects/7).
 
 ## Quick start
 
@@ -11,21 +13,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Full walkthrough: [docs/tutorials/getting-started.md](docs/tutorials/getting-started.md).
+Tutorial: [docs/tutorials/getting-started.md](docs/tutorials/getting-started.md).
 
-## Stack (summary)
+## Stack
 
 Next.js · TypeScript · MUI · next-intl · Motion · Sora + Source Sans 3 (`next/font`)
 
-Details: [docs/reference/stack.md](docs/reference/stack.md).
+Reference: [docs/reference/stack.md](docs/reference/stack.md) · folders: [docs/reference/project-structure.md](docs/reference/project-structure.md).
 
-## Documentation (Diátaxis)
+## Documentation
 
-| Type | Link |
-| --- | --- |
-| Tutorials | [docs/tutorials/](docs/tutorials/) |
-| How-to | [docs/how-to/](docs/how-to/) |
-| Reference | [docs/reference/](docs/reference/) |
-| Explanation | [docs/explanation/](docs/explanation/) |
-
-Index: [docs/README.md](docs/README.md).
+Docs use [Diátaxis](https://diataxis.fr/) (tutorials, how-to, reference, explanation). Index and formatting rules: [docs/README.md](docs/README.md).

@@ -1,5 +1,28 @@
 # How-to guides
 
-Task-oriented guides for common jobs on this repo.
+Short task guides for recurring Frontend work on this repo (add a project, refresh CV files, etc.).
 
-Guides will land here as the app grows (for example: add a project card, switch locale copy, refresh CV PDFs). Until then, use the [getting started tutorial](../tutorials/getting-started.md) and [reference](../reference/).
+None published yet. Until then:
+
+1. Follow [Getting started](../tutorials/getting-started.md) to run the app.
+2. Use [Project structure](../reference/project-structure.md) and [Stack](../reference/stack.md) while implementing board work.
+
+## Guide format (when adding one)
+
+```markdown
+# How to <task>
+
+One sentence: when to use this guide.
+
+## Steps
+1. …
+2. …
+
+## Related
+- …
+```
+
+## Related
+
+- [Documentation index](../README.md)
+- [Getting started](../tutorials/getting-started.md)

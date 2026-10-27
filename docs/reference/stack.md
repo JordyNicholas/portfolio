@@ -1,6 +1,8 @@
-# Stack (target for Portfolio v1)
+# Stack
 
-Authoritative delivery tracking: [Portfolio v1 Delivery](https://github.com/users/JordyNicholas/projects/7) · epic [#1](https://github.com/JordyNicholas/portfolio/issues/1).
+Libraries and npm scripts used by Portfolio v1.
+
+Delivery board: [Portfolio v1 Delivery](https://github.com/users/JordyNicholas/projects/7) · epic [#1](https://github.com/JordyNicholas/portfolio/issues/1).
 
 ## Runtime
 
@@ -8,11 +10,12 @@ Authoritative delivery tracking: [Portfolio v1 Delivery](https://github.com/user
 | --- | --- |
 | Framework | Next.js (App Router) |
 | Language | TypeScript |
-| UI | MUI + Emotion App Router cache (`@mui/material-nextjs`) |
-| i18n | `next-intl` (EN / PT) |
-| Motion | Motion (`motion` package; Framer Motion lineage) |
-| Fonts | Sora (display) + Source Sans 3 (body) via `next/font` |
-| Styling note | Tailwind may remain from scaffold until MUI theme owns the shell |
+| UI | MUI + Emotion (`@mui/material`, `@mui/material-nextjs`) |
+| i18n | next-intl (`messages/en.json`, `messages/pt.json`) |
+| Animation | Motion (`motion`) |
+| Fonts | Sora + Source Sans 3 via `next/font/google` |
+
+Tailwind may still appear from the `create-next-app` scaffold until the MUI theme owns layout chrome.
 
 ## Scripts
 
@@ -20,9 +23,11 @@ Authoritative delivery tracking: [Portfolio v1 Delivery](https://github.com/user
 | --- | --- |
 | `npm run dev` | Development server |
 | `npm run build` | Production build |
-| `npm start` | Serve production build |
+| `npm start` | Serve the production build |
 | `npm run lint` | ESLint |
 
-## Declared vs complete
+## Related
 
-Package presence alone does not finish cycle issues. Each board issue has its own **Task requirement → Definition of Done**. See epic #1 for cycle order.
+- [Project structure](project-structure.md)
+- [Getting started](../tutorials/getting-started.md)
+- [Why this portfolio shape](../explanation/portfolio-v1.md)

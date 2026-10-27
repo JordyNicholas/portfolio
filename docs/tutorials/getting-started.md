@@ -1,10 +1,10 @@
 # Getting started
 
-This tutorial gets a local copy of the portfolio running on your machine.
+Run the portfolio app locally with the default Next.js scripts.
 
 ## Prerequisites
 
-- Node.js 22+ (or the version pinned by the repo when added)
+- Node.js 22+ (or the version you already use with this repo)
 - npm
 - Git
 
@@ -29,8 +29,10 @@ This tutorial gets a local copy of the portfolio running on your machine.
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000). You should see the app shell for the current milestone.
+4. Open [http://localhost:3000](http://localhost:3000). You should see the current home page.
 
-## What you did
+## Related
 
-You installed the project and ran it locally. Next, see [reference/stack.md](../reference/stack.md) for the intended technology inventory, or the delivery board for open work.
+- [Stack](../reference/stack.md) — runtime libraries and scripts
+- [Project structure](../reference/project-structure.md) — folders and i18n/data layout
+- [Documentation index](../README.md)

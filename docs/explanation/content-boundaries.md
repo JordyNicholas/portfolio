@@ -1,10 +1,21 @@
-# Why split `data/` and `messages/`
+# Why `data/` and `messages/`
 
-This site is bilingual. If English and Portuguese strings live inside components, every wording change touches UI files and the two languages drift.
+Why translated copy does not live inside React components.
 
-Frontend apps that use next-intl (and similar i18n libraries) normally keep:
+## Problem
 
-- **message catalogs** for UI copy, and  
-- **modules or CMS data** for structured fields that are the same in every language.
+The site is EN/PT. Hardcoded strings in JSX cause language drift and force UI edits for every wording change.
 
-Here the “CMS” is just TypeScript under `data/`. Components read an id from `data/`, then load the matching strings from `messages/`. That matches how most Next.js + i18n codebases are organized, without extra architecture jargon.
+## Usual Frontend approach
+
+Apps using next-intl (and similar libraries) typically split:
+
+1. **Message catalogs** — `messages/en.json`, `messages/pt.json` for UI text.
+2. **Structured data** — modules (or a CMS) for fields that are the same in every language (URLs, dates, status, tech tags).
+
+This repo uses TypeScript files under `data/` instead of a CMS. A component reads an `id` from `data/`, then loads strings from `messages/` with next-intl.
+
+## Related
+
+- [Project structure](../reference/project-structure.md)
+- [Why this portfolio shape](portfolio-v1.md)

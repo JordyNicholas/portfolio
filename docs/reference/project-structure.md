@@ -6,7 +6,7 @@ Recommended Next.js App Router folders for this portfolio. Frontend-only for v1 
 
 ```text
 app/
-  [locale]/                 # next-intl segment (from C2.1)
+  [locale]/                 # next-intl locale segment
     layout.tsx
     page.tsx                  # composes section components
   styles/fonts/               # next/font exports
@@ -26,7 +26,7 @@ messages/                     # next-intl message catalogs
   pt.json
 lib/                          # i18n setup, pure helpers (no UI)
 public/
-  cv/                         # static CV PDFs (from C4.1)
+  cv/                         # static CV PDFs
 docs/                         # Diátaxis documentation
 ```
 

@@ -41,6 +41,7 @@ Board issue ids (C0.2, etc.) may appear in **Related** or scope notes; they are 
 | --- | --- |
 | [Getting started](tutorials/getting-started.md) | Tutorial |
 | [How-to index](how-to/README.md) | How-to |
+| [Responsive layout foundation](how-to/responsive-layout-foundation.md) | How-to |
 | [Stack](reference/stack.md) | Reference |
 | [Project structure](reference/project-structure.md) | Reference |
 | [Layout and breakpoints](reference/layout.md) | Reference |

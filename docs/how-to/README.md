@@ -2,10 +2,11 @@
 
 Short task guides for recurring Frontend work on this repo (add a project, refresh CV files, etc.).
 
-None published yet. Until then:
+| Guide | Task |
+| --- | --- |
+| [Responsive layout foundation](responsive-layout-foundation.md) | C0.3 — PageContainer, breakpoints, mobile nav stub |
 
-1. Follow [Getting started](../tutorials/getting-started.md) to run the app.
-2. Use [Project structure](../reference/project-structure.md) and [Stack](../reference/stack.md) while implementing board work.
+Also: [Getting started](../tutorials/getting-started.md) · [Project structure](../reference/project-structure.md) · [Stack](../reference/stack.md)
 
 ## Guide format (when adding one)
 

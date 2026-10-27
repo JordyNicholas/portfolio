@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { soraSans, sourceSans3 } from "./styles/fonts";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
+import { soraSans, sourceSans3 } from "@/theme/utils/typography";
+import { ThemeRegistry } from "@/theme/ThemeRegistry";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -15,7 +16,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body>
         <AppRouterCacheProvider>
-          {children}
+          <ThemeRegistry>
+            {children}
+          </ThemeRegistry>
         </AppRouterCacheProvider>
       </body>
     </html>

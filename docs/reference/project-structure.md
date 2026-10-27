@@ -76,13 +76,8 @@ Put LinkedIn, `mailto:`, WhatsApp (`wa.me/…`), GitHub, and CV paths in `data/s
 - Components may import `data/*` and use next-intl; avoid hardcoded EN/PT strings (message keys or stubs are fine until copy is loaded).
 - Section components do not import each other; the page composes them.
 
-## Scope note
-
-For folder scaffolding (C0.2): create the directories, typed stubs in `data/`, and empty `messages` shells. Do not require theme work (C1), next-intl routing (C2.1), full copy (C2.2), or section UI (C3).
-
 ## Related
 
-- [Layout and breakpoints](layout.md)
 - [Why `data/` and `messages/`](../explanation/content-boundaries.md)
 - [Stack](stack.md)
 - [Getting started](../tutorials/getting-started.md)

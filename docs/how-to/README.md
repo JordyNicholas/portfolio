@@ -1,12 +1,8 @@
 # How-to guides
 
-Short task guides for recurring Frontend work on this repo (add a project, refresh CV files, etc.).
+Short task guides for recurring work on this portfolio (for example: refresh CV PDFs, add a project entry).
 
-| Guide | Task |
-| --- | --- |
-| [Responsive layout foundation](responsive-layout-foundation.md) | C0.3 — PageContainer, breakpoints, mobile nav stub |
-
-Also: [Getting started](../tutorials/getting-started.md) · [Project structure](../reference/project-structure.md) · [Stack](../reference/stack.md)
+None published yet. Use [Getting started](../tutorials/getting-started.md), [Project structure](../reference/project-structure.md), and [Stack](../reference/stack.md) while building.
 
 ## Guide format (when adding one)
 

@@ -82,6 +82,7 @@ For folder scaffolding (C0.2): create the directories, typed stubs in `data/`, a
 
 ## Related
 
+- [Layout and breakpoints](layout.md)
 - [Why `data/` and `messages/`](../explanation/content-boundaries.md)
 - [Stack](stack.md)
 - [Getting started](../tutorials/getting-started.md)

@@ -43,5 +43,6 @@ Board issue ids (C0.2, etc.) may appear in **Related** or scope notes; they are 
 | [How-to index](how-to/README.md) | How-to |
 | [Stack](reference/stack.md) | Reference |
 | [Project structure](reference/project-structure.md) | Reference |
+| [Layout and breakpoints](reference/layout.md) | Reference |
 | [Why this portfolio shape](explanation/portfolio-v1.md) | Explanation |
 | [Why `data/` and `messages/`](explanation/content-boundaries.md) | Explanation |

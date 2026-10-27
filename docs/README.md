@@ -19,7 +19,7 @@ Use the same shape on every page:
 2. **Lead** — one short paragraph under the title: what the page is for.
 3. **Body** — `##` sections only (no deeper than `###` unless needed).
 4. **Lists & tables** — prefer tables for inventories; fenced `ts` / `bash` / `text` for code and trees.
-5. **Related** — last section with links to other Diátaxis pages (not to random files).
+5. **Related** — last section with links to other Diátaxis pages.
 
 ### Wording
 
@@ -27,13 +27,13 @@ Prefer common Frontend / Next.js terms:
 
 | Use | Avoid |
 | --- | --- |
-| App Router, pages, layouts | delivery “cycles” as folder names |
+| App Router, pages, layouts | delivery board jargon as folder names |
 | components, providers | ports, adapters, use-cases |
-| `messages/` (i18n catalogs) | content contracts, locale-invariant prose |
+| `messages/` (i18n catalogs) | content contracts |
 | `data/` (shared structured data) | domain layer, entities |
 | `lib/` (config & helpers) | application / infrastructure layer |
 
-Board issue ids (C0.2, etc.) may appear in **Related** or scope notes; they are not Frontend structure vocabulary.
+Docs describe **this portfolio** (how to run it, how it is structured, why). They are not a substitute for the GitHub delivery board.
 
 ## Index
 
@@ -43,6 +43,5 @@ Board issue ids (C0.2, etc.) may appear in **Related** or scope notes; they are 
 | [How-to index](how-to/README.md) | How-to |
 | [Stack](reference/stack.md) | Reference |
 | [Project structure](reference/project-structure.md) | Reference |
-| [Layout and breakpoints](reference/layout.md) | Reference |
 | [Why this portfolio shape](explanation/portfolio-v1.md) | Explanation |
 | [Why `data/` and `messages/`](explanation/content-boundaries.md) | Explanation |

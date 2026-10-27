@@ -6,7 +6,7 @@ Recommended Next.js App Router folders for this portfolio. Frontend-only for v1 
 
 ```text
 app/
-  [locale]/                 # next-intl segment (from C2.1)
+  [locale]/                 # next-intl locale segment
     layout.tsx
     page.tsx                  # composes section components
   styles/fonts/               # next/font exports
@@ -26,7 +26,7 @@ messages/                     # next-intl message catalogs
   pt.json
 lib/                          # i18n setup, pure helpers (no UI)
 public/
-  cv/                         # static CV PDFs (from C4.1)
+  cv/                         # static CV PDFs
 docs/                         # Diátaxis documentation
 ```
 
@@ -76,13 +76,8 @@ Put LinkedIn, `mailto:`, WhatsApp (`wa.me/…`), GitHub, and CV paths in `data/s
 - Components may import `data/*` and use next-intl; avoid hardcoded EN/PT strings (message keys or stubs are fine until copy is loaded).
 - Section components do not import each other; the page composes them.
 
-## Scope note
-
-For folder scaffolding (C0.2): create the directories, typed stubs in `data/`, and empty `messages` shells. Do not require theme work (C1), next-intl routing (C2.1), full copy (C2.2), or section UI (C3).
-
 ## Related
 
-- [Layout and breakpoints](layout.md)
 - [Why `data/` and `messages/`](../explanation/content-boundaries.md)
 - [Stack](stack.md)
 - [Getting started](../tutorials/getting-started.md)

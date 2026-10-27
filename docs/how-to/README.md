@@ -1,11 +1,8 @@
 # How-to guides
 
-Short task guides for recurring Frontend work on this repo (add a project, refresh CV files, etc.).
+Short task guides for recurring work on this portfolio (for example: refresh CV PDFs, add a project entry).
 
-None published yet. Until then:
-
-1. Follow [Getting started](../tutorials/getting-started.md) to run the app.
-2. Use [Project structure](../reference/project-structure.md) and [Stack](../reference/stack.md) while implementing board work.
+None published yet. Use [Getting started](../tutorials/getting-started.md), [Project structure](../reference/project-structure.md), and [Stack](../reference/stack.md) while building.
 
 ## Guide format (when adding one)
 

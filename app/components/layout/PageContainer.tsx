@@ -1,4 +1,4 @@
-import { Container, ContainerProps, CssBaseline } from "@mui/material";
+import { Container, ContainerProps } from "@mui/material";
 import React from "react";
 
 type PageContainerProps = {
@@ -8,7 +8,6 @@ type PageContainerProps = {
 export default function PageContainer({ children, sx, ...props }: PageContainerProps) {
   return (
     <React.Fragment>
-      <CssBaseline />
       <Container
         maxWidth="lg"
         sx={{

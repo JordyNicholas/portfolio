@@ -1,12 +1,11 @@
 export const navItems = [
-  { id: "#home", href: "/" },
-  { id: "#about", href: "/about" },
-  { id: "#experience", href: "/experience" },
-  { id: "#education", href: "/education" },
-  { id: "#skills", href: "/skills" },
-  { id: "#projects", href: "/projects" },
-  { id: "#personal", href: "/personal" },
-  { id: "#contact", href: "/contact" }
+  { id: "about", href: "#about" },
+  { id: "experience", href: "#experience" },
+  { id: "education", href: "#education" },
+  { id: "skills", href: "#skills" },
+  { id: "projects", href: "#projects" },
+  { id: "personal", href: "#personal" },
+  { id: "contact", href: "#contact" }
 ]
 
 export type NavItem = (typeof navItems)[number];
